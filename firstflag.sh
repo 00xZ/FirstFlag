@@ -10,15 +10,21 @@ VHOST_DOMAIN=""
 
 print_banner() {
     printf '\033[1;36m'
+print_banner() {
+    printf '\033[1;36m'
+    printf '\033[1;36m'
+    echo "    "
     echo "   o________"
     echo "   |01001111|  "
     echo "   |01011010|  "
     echo "   |"
-    echo "   |  FirstFlag"
     echo "   |"
-    echo "   "
-    echo "               Github:00xZ - Eyezik "
+    echo "   |     ~~FirstFlag~~"
+    echo "           ~Eyezik~ "
+    echo "    "
     echo "   " #yes im sure i can do \n in some way but im lazy
+    printf '\033[0m\n'
+}
     printf '\033[0m\n'
 }
 
