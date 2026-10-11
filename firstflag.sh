@@ -246,10 +246,11 @@ echo "[ffuf] Fuzzing $VHOST_DOMAIN..."
 ffuf -u "http://$VHOST_DOMAIN" \
      -w "$WORDLIST" \
      -H "HOST: FUZZ.$VHOST_DOMAIN" \
-     -mc all \
-     -ac \
-     -of json -o "$VHOST_JSON" \
-     -s
+     -mc 200,301,302,307,401,403 \
+     -fl 1 \
+     -fw 0 \
+     -fs 0 \
+     -of json -o "$VHOST_JSON"
 
 echo "ffuf done" > "$FFUF_DONE"
 echo
