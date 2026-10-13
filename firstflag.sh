@@ -20,8 +20,6 @@ print_banner() {
     echo "   |"
     echo "   |"
     echo "   |     ~~FirstFlag~~"
-    echo "           ~Eyezik~ "
-    echo "    "
     echo "   " #yes im sure i can do \n in some way but im lazy
     printf '\033[0m\n'
 }
@@ -372,7 +370,6 @@ chmod +x "$VULN_JOB"
 
 launch_parallel() {
     if [[ "$SINGLE_MODE" == true ]]; then
-        echo "[*] Running jobs in this terminal..."
         bash "$NMAP_JOB"
         bash "$FFUF_JOB"
         bash "$VULN_JOB"
